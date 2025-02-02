@@ -9,12 +9,24 @@ body {
 :root {
   /* Colors */
   & {
-    --primary: #007bff;
+    --primary: #1c69c5;
     --secondary: #6c757d;
     --background: #f8f9fa;
     --text: #212529;
     --success: #28a745;
     --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+  }
+
+  &.dark {
+    --primary: #0a2647;
+    --secondary: #6c757d;
+    --background: #212529;
+    --text: #f8f9fa;
+    --success: #198754;
+    --info: #0dcaf0;
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
