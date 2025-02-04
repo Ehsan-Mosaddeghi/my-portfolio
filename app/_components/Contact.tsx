@@ -1,3 +1,5 @@
+import { ShineBorder } from "@/components/ui/shine-border";
+import { MessageCircleMore } from "lucide-react";
 import Image from "next/image";
 
 const contacts = [
@@ -6,7 +8,7 @@ const contacts = [
     icon: "linkedIn",
   },
   {
-    link: "https://github.com/Ehsan-hpy",
+    link: "https://github.com/Ehsan-Mosaddeghi",
     icon: "github",
   },
   {
@@ -29,22 +31,24 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <div className="col-span-2 border rounded-lg">
-      <p className="text-lg mt-3 mx-6">Contact Me</p>
-      <div className="grid grid-cols-3 place-content-center gap-4 py-10 px-24  justify-items-center  group">
+    <ShineBorder className="col-span-2 border rounded-lg bg-background " color={["#86b1e2", "#4450b8", "#A07CFE"]}>
+      <p className="text-lg flex gap-2 pt-3 pl-4 w-full">
+        <MessageCircleMore /> Contact Me
+      </p>
+      <div className="grid grid-cols-3 gap-4 py-10 px-24 group">
         {contacts.map((contact) => (
           <a
             key={contact.link}
             href={contact.link}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 group-hover:animate-pulse duration-300 hover:!opacity-100 hover:scale-110"
+            className="group-hover:animate-pulse relative w-20 h-20 duration-300 hover:!opacity-100 hover:scale-110"
           >
-            <Image src={`${contact.icon}.svg`} width={70} height={70} alt="asd" className="aspect-square" />
+            <Image src={`${contact.icon}.svg`} fill alt="asd " className="aspect-square rounded-" />
           </a>
         ))}
       </div>
-    </div>
+    </ShineBorder>
   );
 };
 
