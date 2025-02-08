@@ -10,7 +10,7 @@ body {
   /* Colors */
   & {
     --primary: #1c69c5;
-    --secondary: #6c757d;
+    --secondary: #b9bbbd;
     --background: #f8f9fa;
     --text: #212529;
     --success: #28a745;
@@ -18,11 +18,13 @@ body {
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
+
+    --shiny-width: 100;
   }
 
   &.dark {
     --primary: #0a2647;
-    --secondary: #6c757d;
+    --secondary: #797979;
     --background: #212529;
     --text: #f8f9fa;
     --success: #198754;
@@ -31,4 +33,15 @@ body {
     --danger: #dc3545;
     --light: #f8f9fa;
   }
+}
+
+.brightness {
+  text-shadow: 0 4px 10px #0057ff33, 0 -4px 10px #ff5a0026, 0 0 30px #fff3;
+}
+
+.text-shadow {
+  text-shadow: -20px 20px 20px #9db7d5, 20px -20px 20px #9db7d5;
+}
+.text-shadow-sec {
+  text-shadow: 20px -20px 20px #d9b8d5, -20px 20px 20px #d9b8d5;
 }

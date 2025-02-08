@@ -1,5 +1,4 @@
 import { ShineBorder } from "@/components/ui/shine-border";
-import DownloadResumeBtn from "./DownloadResumeBtn";
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";
@@ -8,7 +7,7 @@ const Summary = () => {
   return (
     <ShineBorder
       className="col-span-2 p-2 space-y-2 bg-background text-center"
-      color={["#A07CFE", "#4450b8", "#86b1e2"]}
+      color={["#1c69c5", "#1c69c5", "#1c69c5"]}
     >
       <p className="text-lg">
         Feel free to explore my portfolio or reach out to me directly. I&apos;m always open to{" "}

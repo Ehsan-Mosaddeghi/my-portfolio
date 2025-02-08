@@ -7,19 +7,14 @@ import { usePathname } from "next/navigation";
 
 const MenuItems = [
   {
-    id: 1,
-    name: "Home",
-    link: "/",
-  },
-  {
     id: 2,
-    name: "About",
-    link: "/about",
+    name: "Projects",
+    link: "/projects",
   },
   {
     id: 3,
-    name: "Contact",
-    link: "/contact",
+    name: "About me",
+    link: "/about-me",
   },
 ];
 
@@ -31,7 +26,9 @@ const Navbar = () => {
       <BlurFade delay={0.25} inView>
         <div className=" max-w-[90rem] mx-auto flex justify-between items-center px-4 py-2">
           <div className="flex items-center gap-6">
-            <Image priority src="/logo.png" alt="logo" width={50} height={50} />
+            <Link href="/">
+              <Image priority src="/logo.png" alt="logo" width={50} height={50} />
+            </Link>
             <ul className="flex gap-6">
               {MenuItems.map((item) => (
                 <li key={item.id}>

@@ -5,8 +5,8 @@ import { MapPin } from "lucide-react";
 const Location = () => {
   return (
     <ShineBorder
-      className="relative flex size-full col-span-2 max-w-lg  overflow-hidden rounded-lg border bg-background pt-3 pl-4 pb-40 md:pb-60 "
-      color={["#A07CFE", "#4450b8", "#86b1e2"]}
+      className="relative flex size-full col-span-2 max-w-lg  overflow-hidden rounded-lg border bg-background pl-3 pb-40 md:pb-60 "
+      color={["#1c69c5", "#1c69c5", "#1c69c5"]}
     >
       <span className="pointer-events-none flex items-center gap-2 text-lg  leading-none">
         <MapPin /> Iran - Tabriz

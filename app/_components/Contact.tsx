@@ -31,7 +31,7 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <ShineBorder className="col-span-2 border rounded-lg bg-background " color={["#86b1e2", "#4450b8", "#A07CFE"]}>
+    <ShineBorder className="col-span-2 border rounded-lg bg-background " color={["#1c69c5", "#1c69c5", "#1c69c5"]}>
       <p className="text-lg flex gap-2 pt-3 pl-4 w-full">
         <MessageCircleMore /> Contact Me
       </p>
@@ -42,7 +42,7 @@ const Contact = () => {
             href={contact.link}
             target="_blank"
             rel="noreferrer"
-            className="group-hover:animate-pulse relative w-20 h-20 duration-300 hover:!opacity-100 hover:scale-110"
+            className="group-hover:animate-pulse relative cursor-pointer w-16 h-16 duration-300 hover:!opacity-100 hover:scale-105"
           >
             <Image src={`${contact.icon}.svg`} fill alt="asd " className="aspect-square rounded-" />
           </a>

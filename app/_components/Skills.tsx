@@ -20,7 +20,7 @@ const slugs = [
 
 const Skills = () => {
   return (
-    <ShineBorder className="col-span-2 border rounded-lg bg-background" color={["#A07CFE", "#4450b8", "#86b1e2"]}>
+    <ShineBorder className="col-span-2 border rounded-lg bg-background" color={["#1c69c5", "#1c69c5", "#1c69c5"]}>
       <p className="flex items-center gap-2 text-lg py-2 pl-4 w-full">
         <CodeXml /> Skills I have
       </p>
@@ -32,8 +32,8 @@ const Skills = () => {
                 <TooltipTrigger>
                   <Image
                     src={`https://cdn.simpleicons.org/${slug.image}/${slug.image}.svg`}
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     alt={slug.toolTip}
                     className="cursor-pointer hover:-translate-y-1 duration-200"
                   />
