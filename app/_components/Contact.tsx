@@ -29,7 +29,7 @@ const contacts = [
   },
 ];
 
-const Contact = ({ type = "base" }: { type: "footer" | "base" }) => {
+const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
   return (
     <>
       {type === "base" && (
