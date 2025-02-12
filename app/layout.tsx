@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geist.className} antialiased flex flex-col min-h-svh text-text`}>
         <Navbar />
         <main className="flex-1 bg-background">{children}</main>

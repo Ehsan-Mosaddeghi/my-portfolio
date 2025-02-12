@@ -26,18 +26,18 @@ export function Globe({ className, config = GLOBE_CONFIG }: { className?: string
   let phi = 0;
   let width = 0;
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef(null);
+  const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
   const [r, setR] = useState(0);
 
-  const updatePointerInteraction = (value: any) => {
+  const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value ? "grabbing" : "grab";
     }
   };
 
-  const updateMovement = (clientX: any) => {
+  const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
@@ -46,7 +46,7 @@ export function Globe({ className, config = GLOBE_CONFIG }: { className?: string
   };
 
   const onRender = useCallback(
-    (state: Record<string, any>) => {
+    (state: Record<string, number>) => {
       if (!pointerInteracting.current) phi += -0.002;
       state.phi = phi + r;
       state.width = width * 2;
