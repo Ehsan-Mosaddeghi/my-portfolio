@@ -4,13 +4,14 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 :root {
   /* Colors */
-  & {
+  &.light {
     --primary: #1c69c5;
-    --secondary: #b9bbbd;
+    --secondary: #f7f7f7;
     --background: #f8f9fa;
     --text: #212529;
     --success: #28a745;
@@ -18,20 +19,22 @@ body {
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
-
-    --shiny-width: 100;
+    --text-shadow: #96b8e1;
+    --border: #d1d1d1;
   }
 
   &.dark {
-    --primary: #0a2647;
-    --secondary: #797979;
-    --background: #212529;
+    --primary: #1c5494;
+    --secondary: #2e2e2e;
+    --background: #1f1f1f;
     --text: #f8f9fa;
     --success: #198754;
     --info: #0dcaf0;
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
+    --text-shadow: #333f4d;
+    --border: rgb(61, 61, 61);
   }
 }
 
@@ -40,7 +43,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 0px 20px 20px #96b8e1;
+  text-shadow: 0px 20px 20px var(--text-shadow);
 }
 
 ::-webkit-scrollbar {

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="w-full py-8 border-t text-center space-y-2">
+      <footer className="w-full py-8 border-t border-border text-center space-y-2 bg-secondary">
         <h2 className="text-xl">
           <strong className="text-primary">Ehsan</strong> Mosaddeghi
         </h2>

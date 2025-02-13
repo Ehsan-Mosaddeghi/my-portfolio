@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
-import { ShineBorder } from "@/components/ui/shine-border";
 import { CodeXml } from "lucide-react";
 // import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -20,10 +19,7 @@ const slugs = [
 
 const Skills = () => {
   return (
-    <ShineBorder
-      className="col-span-2 border rounded-lg bg-background overflow-hidden"
-      color={["#1c69c5", "#1c69c5", "#1c69c5"]}
-    >
+    <div className="col-span-2 border rounded-lg bg-background overflow-hidden">
       <p className="flex items-center gap-2 text-lg py-2 pl-4 w-full -z-10">
         <CodeXml /> Skills I have
       </p>
@@ -64,7 +60,7 @@ const Skills = () => {
           </span>
         ))}
       </Marquee>
-    </ShineBorder>
+    </div>
   );
 };
 
