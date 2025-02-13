@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { CodeXml } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const slugs = [
   { image: "typescript", toolTip: "Typescript" },
@@ -20,14 +20,32 @@ const slugs = [
 
 const Skills = () => {
   return (
-    <ShineBorder className="col-span-2 border rounded-lg bg-background" color={["#1c69c5", "#1c69c5", "#1c69c5"]}>
-      <p className="flex items-center gap-2 text-lg py-2 pl-4 w-full">
+    <ShineBorder
+      className="col-span-2 border rounded-lg bg-background overflow-hidden"
+      color={["#1c69c5", "#1c69c5", "#1c69c5"]}
+    >
+      <p className="flex items-center gap-2 text-lg py-2 pl-4 w-full -z-10">
         <CodeXml /> Skills I have
       </p>
       <Marquee pauseOnHover className="relative w-full py-2  last:[--duration:20s]">
         {slugs.map((slug) => (
           <span key={slug.image} className="relative">
-            <TooltipProvider>
+            <Image
+              src={`https://cdn.simpleicons.org/${slug.image}/${slug.image}.svg`}
+              width={40}
+              height={40}
+              alt={slug.toolTip}
+              className="cursor-pointer hover:-translate-y-1 duration-200 peer "
+            />
+            <span
+              className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:flex 
+            px-3 py-2 text-sm text-white bg-gray-900 rounded-md shadow-lg
+            transition-opacity duration-300 opacity-0 peer-hover:opacity-100"
+            >
+              {slug.toolTip}
+              <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-900"></span>
+            </span>
+            {/* <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
                   <Image
@@ -42,7 +60,7 @@ const Skills = () => {
                   <p>{slug.toolTip}</p>
                 </TooltipContent>
               </Tooltip>
-            </TooltipProvider>
+            </TooltipProvider> */}
           </span>
         ))}
       </Marquee>
