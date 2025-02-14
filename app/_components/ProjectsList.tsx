@@ -38,8 +38,8 @@ const ProjectsList = () => {
     <motion.div
       initial={{ filter: "blur(6px)", opacity: 0 }}
       animate={{ filter: "blur(0)", opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className=" grid md:grid-cols-2 justify-items-center gap-4 mx-8 md:mx-10 lg:mx-20"
+      transition={{ duration: 0.5 }}
+      className=" grid md:grid-cols-2 justify-items-center gap-8 mx-8 md:mx-10 lg:mx-20"
     >
       {projects.map((project, index) => (
         <ProjectItem key={index} project={project} />

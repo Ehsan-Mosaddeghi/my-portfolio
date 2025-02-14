@@ -1,4 +1,3 @@
-import { ShineBorder } from "@/components/ui/shine-border";
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";

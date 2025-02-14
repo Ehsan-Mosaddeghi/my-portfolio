@@ -36,14 +36,14 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
           <p className="text-lg flex gap-2 pt-3 pl-4 w-full">
             <MessageCircleMore /> Contact Me
           </p>
-          <div className="grid grid-cols-3 gap-4 py-10 px-24 group">
+          <div className="grid grid-cols-3 justify-items-center gap-4 py-12 px-28 group">
             {contacts.map((contact) => (
               <a
                 key={contact.link}
                 href={contact.link}
                 target="_blank"
                 rel="noreferrer"
-                className="group-hover:animate-pulse  relative cursor-pointer w-16 h-16 duration-300 hover:!opacity-100 hover:scale-105"
+                className="group-hover:animate-pulse  relative cursor-pointer w-12 h-12 duration-300 hover:!opacity-100 hover:scale-105"
               >
                 <Image src={`${contact.icon}.svg`} fill alt="asd" className="aspect-square dark:invert" />
               </a>

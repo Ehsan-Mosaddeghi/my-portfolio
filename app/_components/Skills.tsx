@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 import { CodeXml } from "lucide-react";
-// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const slugs = [
   { image: "typescript", toolTip: "Typescript" },
