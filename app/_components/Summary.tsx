@@ -5,10 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 const Summary = () => {
   return (
-    <ShineBorder
-      className="col-span-2 p-2 space-y-2 bg-background text-center"
-      color={["#1c69c5", "#1c69c5", "#1c69c5"]}
-    >
+    <div className="col-span-2 p-2 space-y-2 bg-background text-center border border-border rounded-lg">
       <p className="text-lg">
         Feel free to explore my portfolio or reach out to me directly. I&apos;m always open to{" "}
         <span className="text-primary font-semibold">new opportunities...</span>
@@ -24,7 +21,7 @@ const Summary = () => {
           <ArrowRightIcon className="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedShinyText>
       </div>
-    </ShineBorder>
+    </div>
   );
 };
 
