@@ -19,7 +19,7 @@ const slugs = [
 
 const Skills = () => {
   return (
-    <div className="col-span-2 border rounded-lg bg-background overflow-hidden">
+    <div className="col-span-2 border border-border rounded-lg bg-background overflow-hidden w-full">
       <p className="flex items-center gap-2 text-lg py-2 pl-4 w-full -z-10">
         <CodeXml /> Skills I have
       </p>
@@ -41,22 +41,6 @@ const Skills = () => {
               {slug.toolTip}
               <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-900"></span>
             </span>
-            {/* <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Image
-                    src={`https://cdn.simpleicons.org/${slug.image}/${slug.image}.svg`}
-                    width={40}
-                    height={40}
-                    alt={slug.toolTip}
-                    className="cursor-pointer hover:-translate-y-1 duration-200"
-                  />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{slug.toolTip}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider> */}
           </span>
         ))}
       </Marquee>

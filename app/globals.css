@@ -43,7 +43,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 0px 20px 20px var(--text-shadow);
+  text-shadow: 0px 10px 20px var(--text-shadow);
 }
 
 ::-webkit-scrollbar {
