@@ -45,13 +45,7 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
                 rel="noreferrer"
                 className="group-hover:animate-pulse  relative cursor-pointer w-12 h-12 duration-300 hover:!opacity-100 hover:scale-105"
               >
-                <Image
-                  src={`/${contact.icon}.svg`}
-                  width={45}
-                  height={45}
-                  alt="asd"
-                  className="aspect-square dark:invert"
-                />
+                <img src={`/${contact.icon}.svg`} alt={contact.icon} className="aspect-square dark:invert w-full" />
               </a>
             ))}
           </div>
