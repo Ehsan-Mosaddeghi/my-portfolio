@@ -9,6 +9,7 @@ body {
 
 :root {
   /* Colors */
+  &,
   &.light {
     --primary: #1c69c5;
     --secondary: #f7f7f7;

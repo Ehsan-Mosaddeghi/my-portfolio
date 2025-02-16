@@ -22,7 +22,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="border-b border-border sticky top-0 z-50 backdrop-blur-xl ">
+    <nav className="border-b border-border sticky top-0 z-50 backdrop-blur-xl shadow-md">
       <BlurFade delay={0.25} inView>
         <div className=" max-w-[90rem] mx-auto flex justify-between items-center px-4 py-2">
           <div className="flex items-center gap-6">
