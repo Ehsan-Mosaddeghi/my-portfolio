@@ -11,7 +11,7 @@ const Summary = () => {
         <span className="text-primary font-semibold">new opportunities...</span>
       </p>
 
-      <Link href="about-me">
+      <Link href="about-me" className="flex justify-center items-center">
         <div
           className={cn(
             "group rounded-full border border-black/5 bg-neutral-200 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"

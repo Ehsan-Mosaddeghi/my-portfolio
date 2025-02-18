@@ -34,11 +34,10 @@ const Skills = () => {
             />
             <span
               className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:flex 
-            px-3 py-2 text-sm text-white bg-gray-900 rounded-md shadow-lg
+            px-3 py-2 text-sm text-text bg-transparent backdrop-blur-md border border-border rounded-md shadow-lg
             transition-opacity duration-300 opacity-0 peer-hover:opacity-100"
             >
               {slug.toolTip}
-              <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-900"></span>
             </span>
           </span>
         ))}

@@ -28,8 +28,8 @@ export default function DarkModeToggle() {
       {theme === "light" && <Moon />}
       {theme === "system" && <MonitorCog />}
       <span
-        className="absolute pointer-events-none right-1/2 -translate-x-1/2 top-1/2 w-[5rem] -translate-y-1/2 text-start group-hover:flex 
-            px-1 py-1 text-sm text-white bg-gray-600 rounded-md shadow-lg
+        className="absolute pointer-events-none right-1/2 -translate-x-1/2 top-1/2 w-[5.2rem] -translate-y-1/2 text-start group-hover:flex 
+            px-1 py-1 text-sm text-text bg-transparent border border-border rounded-md shadow-lg
             transition-opacity duration-300 opacity-0 group-hover:opacity-100"
       >
         {theme === "dark" ? "Light Mode" : "Dark Mode"}
