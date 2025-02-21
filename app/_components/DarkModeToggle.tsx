@@ -30,7 +30,7 @@ export default function DarkModeToggle() {
       <span
         className="absolute pointer-events-none right-1/2 -translate-x-1/2 top-1/2 w-[5.2rem] -translate-y-1/2 text-start group-hover:flex 
             px-1 py-1 text-sm text-text bg-transparent border border-border rounded-md shadow-lg
-            transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            transition-opacity duration-300 opacity-0 md:group-hover:opacity-100 "
       >
         {theme === "dark" ? "Light Mode" : "Dark Mode"}
       </span>

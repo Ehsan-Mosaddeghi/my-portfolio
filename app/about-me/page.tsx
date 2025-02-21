@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const page = () => {
   return (
     <div className="container mx-auto px-2">
-      <h1 className="text-3xl brightness mt-10">About Me</h1>
-      <p className="text-lg">A few words about me</p>
+      <h1 className="text-2xl md:text-3xl brightness mt-10">About Me</h1>
+      <p className="text-base md:text-lg">A few words about me</p>
 
       <motion.div
         className="py-12 space-y-10"

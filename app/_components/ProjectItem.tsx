@@ -27,7 +27,7 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
           width={370}
           height={250}
           loading="lazy"
-          quality={100}
+          quality={80}
           className="rounded-md z-10 group-hover:scale-105 transition-transform duration-300"
         />
       </div>
