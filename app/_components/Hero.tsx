@@ -1,18 +1,13 @@
 "use client";
 
 import DownloadResumeBtn from "@/app/_components/DownloadResumeBtn";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
-
   return (
     <motion.div
-      ref={ref}
       initial={{ y: 100, filter: "blur(6px)", opacity: 0 }}
-      animate={isInView ? { y: 0, filter: "blur(0)", opacity: 1 } : {}}
+      animate={{ y: 0, filter: "blur(0)", opacity: 1 }}
       transition={{ duration: 0.8 }}
       className="flex flex-col items-center text-center py-36 md:py-52 z-10 gap-5 px-4"
     >
