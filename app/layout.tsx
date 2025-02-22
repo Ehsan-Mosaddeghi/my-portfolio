@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import Navbar from "@/app/_components/Navbar";
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main className="flex-1 bg-background">{children}</main>
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
