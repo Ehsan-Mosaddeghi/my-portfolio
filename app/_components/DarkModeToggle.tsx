@@ -9,8 +9,6 @@ export default function DarkModeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  console.log(theme);
-
   useEffect(() => {
     setMounted(true);
   }, []);

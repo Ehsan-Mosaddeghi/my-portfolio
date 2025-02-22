@@ -1,7 +1,5 @@
-"use client";
-
+import { BlurFade } from "@/components/ui/blur-fade";
 import AboutMeItem from "../_components/AboutMeItem";
-import { motion } from "framer-motion";
 
 const page = () => {
   return (
@@ -9,12 +7,7 @@ const page = () => {
       <h1 className="text-2xl md:text-3xl brightness mt-10">About Me</h1>
       <p className="text-base md:text-lg">A few words about me</p>
 
-      <motion.div
-        className="py-12 space-y-10"
-        initial={{ filter: "blur(6px)", opacity: 0 }}
-        animate={{ filter: "blur(0)", opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <BlurFade className="py-12 space-y-10" delay={0.25} duration={0.5} direction="up" inView>
         <AboutMeItem title="My Journey as a Frontend Developer">
           My fascination with frontend development began when I was just 16. I that I had a creative streak and a
           passion for working with design and colors. As I delved deeper into the world of coding, I realized that
@@ -40,7 +33,7 @@ const page = () => {
           portfolio or reach out to me directly. I&apos;m always open to new opportunities, collaborations, and
           conversations about the latest tech trends and ideas.
         </AboutMeItem>
-      </motion.div>
+      </BlurFade>
     </div>
   );
 };

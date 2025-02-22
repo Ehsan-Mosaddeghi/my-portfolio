@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import { motion } from "framer-motion";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 interface Project {
   name: string;
@@ -35,16 +33,16 @@ const projects: Project[] = [
 
 const ProjectsList = () => {
   return (
-    <motion.div
-      initial={{ filter: "blur(6px)", opacity: 0 }}
-      animate={{ filter: "blur(0)", opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <BlurFade
       className=" grid md:grid-cols-2 justify-items-center gap-8 mx-8 md:mx-10 lg:mx-20"
+      delay={0.25}
+      duration={0.6}
+      direction="up"
     >
       {projects.map((project, index) => (
         <ProjectItem key={index} project={project} />
       ))}
-    </motion.div>
+    </BlurFade>
   );
 };
 

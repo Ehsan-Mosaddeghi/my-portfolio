@@ -1,15 +1,12 @@
-"use client";
-
 import DownloadResumeBtn from "@/app/_components/DownloadResumeBtn";
-import { motion } from "framer-motion";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const Hero = () => {
   return (
-    <motion.div
-      initial={{ y: 100, filter: "blur(6px)", opacity: 0 }}
-      animate={{ y: 0, filter: "blur(0)", opacity: 1 }}
-      transition={{ duration: 0.8 }}
+    <BlurFade
       className="flex flex-col items-center text-center py-36 md:py-52 z-10 gap-5 px-4"
+      duration={0.6}
+      direction="up"
     >
       <h1 className="text-4xl md:text-6xl font-semibold text-shadow ">Ehsan Mosaddeghi</h1>
       <h1 className="text-4xl md:text-6xl font-semibold text-shadow">Front-End Developer</h1>
@@ -18,7 +15,7 @@ const Hero = () => {
         Enthusiastic about growth and eager to explore new technologies.
       </p>
       <DownloadResumeBtn />
-    </motion.div>
+    </BlurFade>
   );
 };
 
