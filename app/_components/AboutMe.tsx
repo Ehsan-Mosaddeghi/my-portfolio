@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       <h2 className="text-3xl font-bold my-10">About me</h2>
-      <BlurFade className="grid md:grid-cols-4 gap-5" delay={0.25} duration={0.5} direction="up" inView>
+      <BlurFade className="grid md:grid-cols-4 gap-5" delay={0.2} duration={0.5} direction="up">
         <Location />
         <Contact />
         <Summary />
