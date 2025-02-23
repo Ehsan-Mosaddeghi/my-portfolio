@@ -24,11 +24,6 @@ const projects: Project[] = [
     image: "wild_oasis_dashboard",
     live: "https://the-wild-oasis-omega-sepia.vercel.app/",
   },
-  {
-    name: "React Quiz",
-    image: "react_quiz",
-    live: "https://react-quiz-ehsan.vercel.app/",
-  },
 ];
 
 const ProjectsList = () => {
