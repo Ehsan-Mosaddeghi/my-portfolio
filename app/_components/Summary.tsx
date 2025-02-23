@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Summary = () => {
   return (
-    <div className="col-span-2 p-2 space-y-2 bg-background text-center border border-border rounded-lg">
+    <div className="col-span-2 row-start-4 md:row-start-2 p-2 space-y-2 bg-background text-center border border-border rounded-lg">
       <p className="text-lg">
         Feel free to explore my portfolio or reach out to me directly. I&apos;m always open to{" "}
         <span className="text-primary font-semibold">new opportunities...</span>

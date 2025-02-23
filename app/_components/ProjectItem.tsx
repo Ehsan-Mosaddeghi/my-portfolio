@@ -13,7 +13,7 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
     <a
       href={project.live}
       target="_blank"
-      className="relative w-full  justify-center items-center group ring-2 ring-stone-500 dark:ring-stone-700 z-10 flex  flex-col p-2 rounded-lg bg-zinc-400 dark:bg-zinc-600 hover:shadow-lg"
+      className="relative w-full max-w-fit justify-center items-center group ring-2 ring-stone-500 dark:ring-stone-700 z-10 flex  flex-col p-2 rounded-lg bg-zinc-400 dark:bg-zinc-600 hover:shadow-lg"
     >
       <div className="flex  gap-1 ml-2 mb-2 ">
         <div className="w-2 h-2 rounded-full duration-300 transition-all bg-gray-600 dark:bg-gray-800 group-hover:bg-red-600"></div>
