@@ -25,7 +25,7 @@ body {
   }
 
   &.dark {
-    --primary: #1c5494;
+    --primary: #3b7eca;
     --secondary: #2e2e2e;
     --background: #1f1f1f;
     --text: #f8f9fa;
@@ -65,3 +65,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+
+@layer base {}
