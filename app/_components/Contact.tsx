@@ -28,7 +28,7 @@ const contacts = [
     name: "Discord",
   },
   {
-    link: "https://mail.google.com/mail/u/0/?fs=1&to=xdehsanxd@gmail.com&su=Hello&body=I+want+to+contact+you&tf=cm",
+    link: "https://mail.google.com/mail/u/0/?fs=1&to=ehsan.frontdev@gmail.com&su=Hello&body=I+want+to+contact+you&tf=cm",
     icon: "mail",
     name: "Email",
   },
