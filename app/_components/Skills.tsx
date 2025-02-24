@@ -5,15 +5,15 @@ import { Marquee } from "@/components/ui/marquee";
 import { CodeXml } from "lucide-react";
 
 const slugs = [
-  { image: "typescript", toolTip: "Typescript" },
-  { image: "javascript", toolTip: "Javascript" },
-  { image: "html5", toolTip: "HTML" },
-  { image: "css3", toolTip: "CSS" },
-  { image: "vue.js", toolTip: "Vue" },
-  { image: "nuxt", toolTip: "Nuxt" },
-  { image: "react", toolTip: "React" },
-  { image: "next.js", toolTip: "Next.js" },
-  { image: "tailwindcss", toolTip: "TailwindCSS" },
+  { image: "typescript", toolTip: "Typescript", link: "https://www.typescriptlang.org/" },
+  { image: "javascript", toolTip: "Javascript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { image: "html5", toolTip: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { image: "css3", toolTip: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { image: "vue.js", toolTip: "Vue", link: "https://vuejs.org/" },
+  { image: "nuxt", toolTip: "Nuxt", link: "https://nuxtjs.org/" },
+  { image: "react", toolTip: "React", link: "https://reactjs.org/" },
+  { image: "next.js", toolTip: "Next.js", link: "https://nextjs.org/" },
+  { image: "tailwindcss", toolTip: "TailwindCSS", link: "https://tailwindcss.com/" },
 ];
 
 const Skills = () => {
@@ -24,7 +24,7 @@ const Skills = () => {
       </p>
       <Marquee pauseOnHover className="relative w-full py-2  last:[--duration:20s]">
         {slugs.map((slug) => (
-          <span key={slug.image} className="relative">
+          <a target="blink" href={slug.link} key={slug.image} className="relative">
             <Image
               src={`https://cdn.simpleicons.org/${slug.image}/${slug.image}.svg`}
               width={40}
@@ -39,7 +39,7 @@ const Skills = () => {
             >
               {slug.toolTip}
             </span>
-          </span>
+          </a>
         ))}
       </Marquee>
     </div>

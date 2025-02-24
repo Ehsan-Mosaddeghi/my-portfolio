@@ -26,8 +26,8 @@ body {
 
   &.dark {
     --primary: #3b7eca;
-    --secondary: #2e2e2e;
-    --background: #1f1f1f;
+    --secondary: #232426;
+    --background: #101113;
     --text: #f8f9fa;
     --success: #198754;
     --info: #0dcaf0;
@@ -66,6 +66,5 @@ body {
   background: #555;
 }
 
-
-
-@layer base {}
+@layer base {
+}
