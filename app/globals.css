@@ -47,6 +47,10 @@ body {
   text-shadow: 0px 10px 20px var(--text-shadow);
 }
 
+.danger {
+  color: var(--danger);
+}
+
 ::-webkit-scrollbar {
   width: 8px; /* For vertical scrollbar */
   height: 8px; /* For horizontal scrollbar */
@@ -66,5 +70,6 @@ body {
   background: #555;
 }
 
-@layer base {
+.no-scroll {
+  overflow: hidden !important;
 }

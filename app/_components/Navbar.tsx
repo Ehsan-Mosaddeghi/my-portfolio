@@ -4,27 +4,44 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DarkModeToggle from "./DarkModeToggle";
+import BurgerMenu from "./BurgerMenu";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 const MenuItems = [
   {
-    id: 2,
+    id: 1,
     name: "Projects",
     link: "/projects",
   },
   {
-    id: 3,
+    id: 2,
     name: "About me",
     link: "/about-me",
+  },
+  {
+    id: 3,
+    name: "Contact me",
+    link: "/contact",
   },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
 
   return (
     <nav className="border-b border-border bg-transparent sticky top-0 z-50 backdrop-blur-xl shadow-md dark:shadow-secondary h-[60px]">
-      <BlurFade delay={0.25} inView>
-        <div className=" max-w-[90rem] mx-auto flex justify-between items-center px-4 py-2">
+      <BlurFade delay={0.25}>
+        <div className="max-w-[90rem] mx-auto flex justify-between items-center px-4 py-2">
           <div className="flex items-center gap-4 md:gap-6">
             <Link
               href="/"
@@ -32,7 +49,7 @@ const Navbar = () => {
             >
               EHSAN
             </Link>
-            <ul className="flex gap-4 md:gap-6">
+            <ul className="md:flex gap-4 md:gap-6 hidden">
               {MenuItems.map((item) => (
                 <li key={item.id}>
                   <Link
@@ -50,9 +67,44 @@ const Navbar = () => {
 
           <div className="flex items-center gap-6">
             <DarkModeToggle />
+            <BurgerMenu isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
           </div>
         </div>
       </BlurFade>
+      {isMenuOpen && (
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className="fixed w-full h-svh top-[60px] inset-0 bg-gray-700/50 dark:bg-gray-900/50 z-40"
+        ></div>
+      )}
+      {createPortal(
+        <>
+          <div
+            className={` z-50 transform transition-transform duration-300 fixed top-[60px] pt-10 right-0 h-full w-[250px] bg-secondary  ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full "
+            }`}
+          >
+            <ul className="flex flex-col gap-4 p-4">
+              {MenuItems.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={item.link}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`${
+                      pathname === item.link ? "bg-zinc-200 dark:bg-zinc-700" : ""
+                    } p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background duration-300 flex flex-col items-center `}
+                  >
+                    {item.name}
+                    <div className="block w-[80%] h-[3px]  bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>,
+
+        document.body
+      )}
     </nav>
   );
 };
