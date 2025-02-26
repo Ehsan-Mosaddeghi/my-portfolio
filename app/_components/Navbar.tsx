@@ -30,6 +30,17 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const MyPortal = (children: React.ReactNode) => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // Avoid rendering on the server
+
+    return createPortal(children, document.body);
+  };
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -77,7 +88,8 @@ const Navbar = () => {
           className="fixed w-full h-svh top-[60px] inset-0 bg-gray-700/50 dark:bg-gray-900/50 z-40"
         ></div>
       )}
-      {createPortal(
+
+      {MyPortal(
         <>
           <div
             className={` z-50 transform transition-transform duration-300 fixed top-[60px] pt-10 right-0 h-full w-[250px] bg-secondary  ${
@@ -101,9 +113,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-        </>,
-
-        document.body
+        </>
       )}
     </nav>
   );
