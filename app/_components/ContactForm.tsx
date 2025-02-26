@@ -1,6 +1,7 @@
 "use client";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { useState } from "react";
+import Spinner from "./Spinner";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -89,9 +90,9 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="p-2  bg-gradient-to-r from-[#5489c5] via-[#080b23] to-[#5489c5] text-white rounded animate-shiny-text hover:shadow-lg  duration-300 "
+          className="p-2 flex items-center justify-center  bg-gradient-to-r from-[#5489c5] via-[#080b23] to-[#5489c5] text-white rounded animate-shiny-text hover:shadow-lg  duration-300 "
         >
-          Send
+          {status === "Sending..." ? <Spinner /> : "Send Message"}
         </button>
         <p>{status}</p>
       </form>
