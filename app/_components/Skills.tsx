@@ -8,7 +8,7 @@ const slugs = [
   { image: "typescript", toolTip: "Typescript", link: "https://www.typescriptlang.org/" },
   { image: "javascript", toolTip: "Javascript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
   { image: "html5", toolTip: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-  { image: "css3", toolTip: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { image: "css", toolTip: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   { image: "vue.js", toolTip: "Vue", link: "https://vuejs.org/" },
   { image: "nuxt", toolTip: "Nuxt", link: "https://nuxtjs.org/" },
   { image: "react", toolTip: "React", link: "https://reactjs.org/" },
