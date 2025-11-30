@@ -5,20 +5,18 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
 
-    // Configure Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Use SMTP for other providers
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Send email
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // Your Gmail (must be your own for Gmail SMTP)
-      to: process.env.EMAIL_USER, // Your email (where you receive the messages)
-      replyTo: email, // User's email (so replies go to them)
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New Contact from ${name}`,
       text: message,
     });

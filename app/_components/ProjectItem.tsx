@@ -20,7 +20,7 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
         <div className="w-2 h-2 rounded-full duration-500 transition-all bg-gray-600 dark:bg-gray-800 group-hover:bg-yellow-600"></div>
         <div className="w-2 h-2 rounded-full duration-700 transition-all bg-gray-600 dark:bg-gray-800 group-hover:bg-green-600"></div>
       </div>
-      <div className="overflow-hidden rounded-md">
+      <div className="overflow-hidden rounded-md h-[215px]">
         <Image
           src={`/projects_${project.image}.png`}
           alt={project.name}

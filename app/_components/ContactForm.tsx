@@ -90,7 +90,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="p-2 flex items-center justify-center  bg-gradient-to-r from-[#5489c5] via-[#080b23] to-[#5489c5] text-white rounded animate-shiny-text hover:shadow-lg  duration-300 "
+          className="p-2 flex items-center justify-center bg-gradient-to-r from-[#5664ce] via-[#999dbe] to-[#5664ce] text-white rounded animate-shiny-text hover:shadow-lg  duration-300 hover:text-gray-800 hover:ring-1 ring-white"
         >
           {status === "Sending..." ? <Spinner /> : "Send Message"}
         </button>

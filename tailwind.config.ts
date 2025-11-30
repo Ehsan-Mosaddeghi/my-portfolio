@@ -26,7 +26,7 @@ export default {
         marquee: "marquee var(--duration) infinite linear",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         shine: "shine var(--duration) infinite linear",
-        "shiny-text": "shiny-text 8s infinite",
+        "shiny-text": "shiny-text 6s infinite",
       },
       keyframes: {
         "border-beam": {
@@ -63,10 +63,10 @@ export default {
         },
         "shiny-text": {
           "0%, 90%, 100%": {
-            "background-position": "calc(-100% - 100px) 0",
+            "background-position": "calc(-100% - 250px) 0",
           },
           "30%, 60%": {
-            "background-position": "calc(100% + 100px) 0",
+            "background-position": "calc(100% + 250px) 0",
           },
         },
       },

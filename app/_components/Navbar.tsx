@@ -50,9 +50,9 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="border-b border-border bg-transparent sticky top-0 z-50 backdrop-blur-xl shadow-md dark:shadow-secondary h-[60px]">
+    <nav className="border-b border-border bg-transparent sticky top-0 z-50 backdrop-blur-xl shadow-md dark:shadow-secondary h-[75px] ">
       <BlurFade delay={0.25}>
-        <div className="max-w-[90rem] mx-auto flex justify-between items-center px-4 py-2">
+        <div className="max-w-[90rem] mx-auto flex justify-between items-center px-4 py-4">
           <div className="flex items-center gap-4 md:gap-6">
             <Link
               href="/"
