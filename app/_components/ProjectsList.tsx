@@ -10,6 +10,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "Vaultly",
+    image: "vaultly",
+    live: "https://vaultly-tracker.vercel.app/",
+  },
+  {
     name: "Weather website",
     image: "weather",
     live: "https://weather-w.vercel.app/",
