@@ -4,7 +4,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 :root {
@@ -40,7 +42,10 @@ body {
 }
 
 .brightness {
-  text-shadow: 0 4px 10px #0057ff33, 0 -4px 10px #ff5a0026, 0 0 30px #fff3;
+  text-shadow:
+    0 4px 10px #0057ff33,
+    0 -4px 10px #ff5a0026,
+    0 0 30px #fff3;
 }
 
 .text-shadow {
@@ -68,6 +73,10 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.container {
+  @apply px-4;
 }
 
 .no-scroll {

@@ -11,16 +11,21 @@ import { createPortal } from "react-dom";
 const MenuItems = [
   {
     id: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
     name: "Projects",
     link: "/projects",
   },
   {
-    id: 2,
+    id: 3,
     name: "About me",
     link: "/about-me",
   },
   {
-    id: 3,
+    id: 4,
     name: "Contact me",
     link: "/contact",
   },
@@ -66,7 +71,9 @@ const Navbar = () => {
                   <Link
                     href={item.link}
                     className={`${
-                      pathname === item.link ? "bg-zinc-200 dark:bg-zinc-700" : ""
+                      pathname === item.link
+                        ? "bg-zinc-200 dark:bg-zinc-700"
+                        : ""
                     } px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background duration-300`}
                   >
                     {item.name}
@@ -78,7 +85,10 @@ const Navbar = () => {
 
           <div className="flex items-center gap-6">
             <DarkModeToggle />
-            <BurgerMenu isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+            <BurgerMenu
+              isMenuOpen={isMenuOpen}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
           </div>
         </div>
       </BlurFade>
@@ -103,7 +113,9 @@ const Navbar = () => {
                     href={item.link}
                     onClick={() => setIsMenuOpen(false)}
                     className={`${
-                      pathname === item.link ? "bg-zinc-200 dark:bg-zinc-700" : ""
+                      pathname === item.link
+                        ? "bg-zinc-200 dark:bg-zinc-700"
+                        : ""
                     } p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background duration-300 flex flex-col items-center `}
                   >
                     {item.name}
@@ -113,7 +125,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-        </>
+        </>,
       )}
     </nav>
   );
