@@ -10,6 +10,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "Raceroms",
+    image: "raceroms",
+    live: "https://raceroms.com/en",
+  },
+  {
     name: "Vaultly",
     image: "vaultly",
     live: "https://vaultly-tracker.vercel.app/",
