@@ -31,6 +31,12 @@ const Hero = () => {
         growth and eager to explore new technologies.
       </p>
       <DownloadResumeBtn />
+      <a
+        href="#featured-projects"
+        className="inline-flex underline items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300"
+      >
+        View Projects
+      </a>
     </BlurFade>
   );
 };

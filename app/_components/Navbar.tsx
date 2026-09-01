@@ -65,16 +65,16 @@ const Navbar = () => {
             >
               EHSAN
             </Link>
-            <ul className="md:flex gap-4 md:gap-6 hidden">
+            <ul className="md:flex gap-4 md:gap-4 hidden">
               {MenuItems.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`${
+                    className={`px-4 py-2 rounded duration-300 ${
                       pathname === item.link
-                        ? "bg-zinc-200 dark:bg-zinc-700"
-                        : ""
-                    } px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background duration-300`}
+                        ? "bg-primary text-secondary"
+                        : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:text-background"
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -119,7 +119,7 @@ const Navbar = () => {
                     } p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background duration-300 flex flex-col items-center `}
                   >
                     {item.name}
-                    <div className="block w-[80%] h-[3px]  bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+                    <div className="block w-[80%] h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent"></div>
                   </Link>
                 </li>
               ))}

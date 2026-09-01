@@ -2,6 +2,7 @@ import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import Hero from "./_components/Hero";
 import AboutMe from "./_components/AboutMe";
+import FeaturedProjects from "./_components/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -14,11 +15,11 @@ export default function Home() {
           duration={3}
           className={cn(
             "[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12"
+            "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12",
           )}
         />
       </div>
-
+      <FeaturedProjects />
       <AboutMe />
     </>
   );

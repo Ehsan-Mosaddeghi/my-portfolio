@@ -41,7 +41,7 @@ const ProjectsList = () => {
     <BlurFade
       className=" grid md:grid-cols-2 justify-items-center gap-8 mx-8 md:mx-10 lg:mx-20"
       delay={0.25}
-      duration={0.6}
+      duration={0.2}
       direction="up"
     >
       {projects.map((project, index) => (

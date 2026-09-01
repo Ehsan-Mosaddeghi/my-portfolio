@@ -12,7 +12,9 @@ export default function ContactForm() {
   const [status, setStatus] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
   };
@@ -48,7 +50,12 @@ export default function ContactForm() {
   };
 
   return (
-    <BlurFade delay={0.25} duration={0.6} direction="up" className="w-full max-w-[40rem] ">
+    <BlurFade
+      delay={0.25}
+      duration={0.2}
+      direction="up"
+      className="w-full max-w-[40rem] "
+    >
       <form onSubmit={handleSubmit} className="flex flex-col space-y-3 ">
         <label htmlFor="name">
           Your Name <span className="danger">*</span>

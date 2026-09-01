@@ -39,7 +39,7 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
     <>
       {type === "base" && (
         <div className="col-span-2 border rounded-lg space-y-6 md:space-y-10 bg-background border-border">
-          <p className="text-lg flex gap-2 pt-3 pl-4 w-full">
+          <p className="text-lg flex gap-2 pt-6 pl-6 w-full">
             <MessageCircleMore /> Contact Me
           </p>
           <div className="grid grid-cols-3 justify-items-center gap-y-8 text-center pb-8 px-10 ">
@@ -72,7 +72,12 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
               rel="noreferrer"
               className="relative cursor-pointer w-12 h-12 duration-300 hover:-translate-y-1"
             >
-              <Image src={`${contact.icon}.svg`} fill alt="asd" className="aspect-square rounded-xl" />
+              <Image
+                src={`${contact.icon}.svg`}
+                fill
+                alt="asd"
+                className="aspect-square rounded-xl"
+              />
             </a>
           ))}
         </div>
