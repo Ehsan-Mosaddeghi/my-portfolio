@@ -2,57 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  techStack: string[];
-  image: string;
-  liveUrl?: string;
-  repoUrl?: string;
-}
-
-const projects: Project[] = [
-  {
-    id: "vaultly",
-    title: "Vaultly",
-    description:
-      "A full-stack personal finance tracker that helps users manage income, expenses, and multiple wallets through an intuitive dashboard with real-time analytics. Built to explore modern Vue architecture, secure authentication flows, and scalable database design with a focus on clean UI and user experience.",
-
-    techStack: [
-      "Nuxt 4",
-      "TypeScript",
-      "Tailwind CSS",
-      "Nuxt UI",
-      "Nuxt Charts",
-      "Pinia",
-      "Supabase",
-      "Valibot",
-    ],
-    image: "/projects_vaultly.png",
-    liveUrl: "https://vaultly-tracker.vercel.app",
-    repoUrl: "https://github.com/Ehsan-Mosaddeghi/Vaultly",
-  },
-  {
-    id: "raceroms",
-    title: "Raceroms",
-    description:
-      "A commercial, multi-language website for an ECU tuning and chip remapping company, built from Figma designs into a responsive, SEO-optimized production site. Features a vehicle performance lookup, product catalog, and integrated contact forms serving both English and Greek markets.",
-
-    techStack: [
-      "Nuxt 3",
-      "Vue 3",
-      "TypeScript",
-      "Tailwind CSS",
-      "Shadcn",
-      "Axios",
-      "i18n",
-    ],
-    image: "/projects_raceroms.png",
-    liveUrl: "https://raceroms.com/",
-  },
-];
+import { projects } from "@/data/projects";
 
 const FeaturedProjects = () => {
   return (

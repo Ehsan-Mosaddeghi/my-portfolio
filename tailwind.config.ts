@@ -13,6 +13,8 @@ export default {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         text: "var(--text)",
+        success: "var(--success)",
+        error: "var(--error)",
       },
       backgroundColor: {
         background: "var(--background)",

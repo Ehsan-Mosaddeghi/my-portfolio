@@ -1,40 +1,7 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
 import { BlurFade } from "@/components/ui/blur-fade";
-
-interface Project {
-  name: string;
-  image: string;
-  live: string;
-}
-
-const projects: Project[] = [
-  {
-    name: "Raceroms",
-    image: "raceroms",
-    live: "https://raceroms.com/en",
-  },
-  {
-    name: "Vaultly",
-    image: "vaultly",
-    live: "https://vaultly-tracker.vercel.app/",
-  },
-  {
-    name: "Weather website",
-    image: "weather",
-    live: "https://weather-w.vercel.app/",
-  },
-  // {
-  //   name: "The Wild Oasis",
-  //   image: "wild_oasis_user",
-  //   live: "https://the-wild-oasis-user-ten.vercel.app/",
-  // },
-  // {
-  //   name: "Wild Oasis Dashboard",
-  //   image: "wild_oasis_dashboard",
-  //   live: "https://the-wild-oasis-omega-sepia.vercel.app/",
-  // },
-];
+import { projects } from "@/data/projects";
 
 const ProjectsList = () => {
   return (
