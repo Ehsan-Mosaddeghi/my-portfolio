@@ -33,7 +33,6 @@ const FeaturedProjects = () => {
             <BlurFade
               direction="up"
               duration={0.5}
-              delay={0.2}
               inView
               key={project.id}
               className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
