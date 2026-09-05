@@ -38,7 +38,7 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
   return (
     <>
       {type === "base" && (
-        <div className="col-span-2 border rounded-lg space-y-6 md:space-y-10 bg-background border-border">
+        <div className="col-span-2 border rounded-lg space-y-6 md:space-y-10 bg-background border-border transition-colors duration-300">
           <p className="text-lg flex gap-2 pt-6 pl-6 w-full">
             <MessageCircleMore /> Contact Me
           </p>
@@ -49,12 +49,12 @@ const Contact = ({ type = "base" }: { type?: "footer" | "base" }) => {
                 href={contact.link}
                 target="_blank"
                 rel="noreferrer"
-                className="relative flex flex-col gap-1 items-center cursor-pointer w-12 h-12 duration-300 hover:!opacity-100 hover:shadow-lg hover:bg-stone-300 dark:hover:bg-stone-800 p-1 rounded-md group"
+                className="relative flex flex-col gap-1 items-center cursor-pointer w-12 h-12 duration-300 hover:!opacity-100 hover:shadow-xl p-1 rounded-md group"
               >
                 <img
                   src={`/${contact.icon}.svg`}
                   alt={contact.icon}
-                  className="aspect-square dark:invert w-full transition-transform duration-200 group-hover:rotate-12"
+                  className="aspect-square dark:invert w-full transition-transform duration-200 group-hover:scale-110"
                 />
                 <span className="opacity-70 ">{contact.name}</span>
               </a>

@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <BlurFade
-      className="flex flex-col items-center text-center py-36 md:py-52 z-10 gap-5 px-4"
+      className="flex flex-col items-center text-center  py-36 md:py-52 z-10 gap-5 px-4"
       duration={0.6}
       direction="up"
     >

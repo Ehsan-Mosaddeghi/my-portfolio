@@ -7,7 +7,7 @@ import FeaturedProjects from "./_components/FeaturedProjects";
 export default function Home() {
   return (
     <>
-      <div className="relative w-full overflow-hidden bg-background ">
+      <div className="relative w-full overflow-hidden bg-background transition-colors duration-300">
         <Hero />
         <AnimatedGridPattern
           numSquares={30}

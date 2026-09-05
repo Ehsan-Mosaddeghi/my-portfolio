@@ -22,12 +22,12 @@ export default function DarkModeToggle() {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="p-2 rounded-md relative hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-background group"
     >
-      {theme === "dark" && <Sun />}
-      {theme === "light" && <Moon />}
-      {theme === "system" && <MonitorCog />}
+      {theme === "dark" && <Sun size={20} />}
+      {theme === "light" && <Moon size={20} />}
+      {theme === "system" && <MonitorCog size={20} />}
       <span
-        className="absolute pointer-events-none right-1/2 -translate-x-1/2 top-1/2 w-[5.2rem] -translate-y-1/2 text-start group-hover:flex 
-            px-1 py-1 text-sm text-text bg-transparent border border-border rounded-md shadow-lg
+        className="absolute pointer-events-none right-1/2 -translate-x-1/2 top-1/2 w-[4.6rem] -translate-y-1/2 text-start group-hover:flex 
+            px-1 py-1 text-xs text-text bg-transparent border border-border rounded-md shadow-lg
             transition-opacity duration-300 opacity-0 md:group-hover:opacity-100 "
       >
         {theme === "dark" ? "Light Mode" : "Dark Mode"}

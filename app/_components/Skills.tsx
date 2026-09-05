@@ -38,7 +38,7 @@ const slugs = [
 
 const Skills = () => {
   return (
-    <div className="col-span-2 border border-border rounded-lg bg-background overflow-hidden w-full">
+    <div className="col-span-2 border border-border rounded-lg bg-background overflow-hidden w-full transition-colors duration-300">
       <p className="flex items-center gap-2 text-lg p-6  w-full -z-10">
         <CodeXml /> Skills I have
       </p>

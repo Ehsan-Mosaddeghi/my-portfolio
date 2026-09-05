@@ -24,10 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.className} antialiased flex flex-col min-h-svh text-text bg-secondary`}>
+      <body
+        className={`${geist.className} antialiased flex flex-col min-h-svh text-text bg-secondary`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <main className="flex-1 bg-background">{children}</main>
+          <main className="flex-1 bg-background transition-colors duration-300">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
         <SpeedInsights />
