@@ -1,13 +1,22 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description: "The page you are looking for does not exist.",
+};
 
 const notFound = () => {
   return (
     <div className="w-full h-[calc(100svh-100px)] flex flex-col gap-3 justify-center items-center text-center">
-      <h1 className="text-9xl text-pretty text-primary text- font-black brightness ">Oops!</h1>
+      <h1 className="text-9xl text-pretty text-primary text- font-black brightness ">
+        Oops!
+      </h1>
       <h3 className="text-xl">404 - PAGE NOT FOUND</h3>
       <p className="max-w-[30rem] text-lg text-gray-500">
-        the page you are looking for might have been removed had its name changed or is temporarily unavailable.
+        the page you are looking for might have been removed had its name
+        changed or is temporarily unavailable.
       </p>
       <Link
         href="/"

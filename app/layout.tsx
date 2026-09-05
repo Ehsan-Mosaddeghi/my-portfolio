@@ -13,7 +13,10 @@ const geist = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ehsan Mosaddeghi",
+  title: {
+    default: "Ehsan Mosaddeghi - Front-End Developer",
+    template: "%s | Ehsan Mosaddeghi",
+  },
   description: "Personal website of Ehsan Mosaddeghi",
 };
 

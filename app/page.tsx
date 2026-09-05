@@ -3,6 +3,12 @@ import { cn } from "@/lib/utils";
 import Hero from "./_components/Hero";
 import AboutMe from "./_components/AboutMe";
 import FeaturedProjects from "./_components/FeaturedProjects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ehsan Mosaddeghi - Front-End Developer",
+  description: "Personal website of Ehsan Mosaddeghi",
+};
 
 export default function Home() {
   return (

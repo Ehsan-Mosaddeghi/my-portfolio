@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import ProjectsList from "../_components/ProjectsList";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "A list of projects I've worked on",
+};
 
 const page = () => {
   return (

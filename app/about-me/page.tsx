@@ -1,5 +1,11 @@
 import { BlurFade } from "@/components/ui/blur-fade";
 import AboutMeItem from "../_components/AboutMeItem";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Me",
+  description: "A few words about my journey, interests, and aspirations",
+};
 
 const page = () => {
   return (

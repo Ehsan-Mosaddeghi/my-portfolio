@@ -87,9 +87,15 @@ export const projects: Project[] = [
     challenges: [
       {
         problem:
-          "Figma designs used specific spacing and typography that needed to scale perfectly across all breakpoints.",
+          "Each service page needed unique SEO metadata instead of sharing the same title and description.",
         solution:
-          "Created a custom Tailwind config extending the design system tokens, ensuring 1:1 fidelity from mobile to desktop.",
+          "Implemented dynamic metadata based on the service data, including unique titles, descriptions, and canonical URLs.",
+      },
+      {
+        problem:
+          "Some pages contained large sections of content and images, so simply rendering everything immediately could negatively affect the initial experience.",
+        solution:
+          "I separated components based on their rendering requirements and optimized how content and assets were loaded. I also paid attention to responsive behavior and loading states to make the site feel faster and more polished.",
       },
     ],
   },

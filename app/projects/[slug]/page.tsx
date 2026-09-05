@@ -3,6 +3,22 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from "lucide-react";
 import { getProjectBySlug } from "@/data/projects";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  return {
+    title: project?.title,
+    description: project
+      ? project.description
+      : "A list of projects I've worked on",
+  };
+}
 
 export default async function ProjectPage({
   params,
